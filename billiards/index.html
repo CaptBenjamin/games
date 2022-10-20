@@ -408,17 +408,36 @@
                 </div>
             </noscript>
             <div class="row">
-                <div class="col-sm-9 p-3">
+                <div class="col-sm-10 p-3">
                     <h1 class="text-primary">
                         <span class="text">台球</span>
                     </h1>
                 </div>
-                <div class="col-sm-3 p-3">
+                <div class="col-sm-2 p-3">
                     <a class="btn btn-outline-primary btn-lg" href="https://games.lykns.tk/billiards/start.html">开始游玩 &raquo;</a>
                 </div>
               </div>
             说明书
-            <iframe src="https://games.lykns.tk/billiards/readme.html" width=100% height=600px></iframe>
+            <iframe id="mainiframe" width="100%" height="100"
+                src="https://games.lykns.tk/billiards/readme.html"
+                frameborder="0" scrolling="auto"
+                style=" border: #0078d4 2px solid; max-width:100%; max-height:100%"></iframe>
+            <script>
+                function changeFrameHeight() {
+                    var ifm = document.getElementById("mainiframe");
+                    ifm.height = document.documentElement.clientHeight - 275;
+                }
+                window.onresize = function () { changeFrameHeight(); }
+                $(function () { changeFrameHeight(); });
+            </script>
+            <script>
+                function changeFrameHeight() {
+                    var ifm = document.getElementById("mainiframe");
+                    ifm.height = document.documentElement.clientHeight - 275;
+                }
+                window.onload = function () { changeFrameHeight(); }
+                $(function () { changeFrameHeight(); });
+            </script>
         </main>
     </div>
 
